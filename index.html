@@ -16,9 +16,16 @@
 
 
     <link rel="shortcut icon" href="favicon.png">
-    <link rel="stylesheet" href="./styles.css">
+    <!-- build:css ./styles.css -->
+    <link rel="stylesheet" type="text/css" href="bb8.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="libs/sweetalert/dist/sweetalert.css">
+    <!-- endbuild -->
 
-    <script src="./vendor.js"></script>
+    <!-- build:js ./vendor.js -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src='libs/sweetalert/dist/sweetalert.min.js'></script>
+    <!-- endbuild -->
 
     <meta name="theme-color" content="#000">
     <!-- Add to homescreen -->
@@ -27,15 +34,17 @@
 </head>
 <body>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=966673750071792";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="bg">
+    <div class="evanStar" style="color:white">
+
+        Come. You must. <br>
+        Saturday June 25th, 2:00 - 4:00pm<br>
+        8976 Gainsborough Ave<br>
+        RSVP: rebecca.d.cardoso@gmail.com<br>
+        <br>
+        <img class="evan_invite" src="invite.png">
+    </div>
     <div class="deathstar"></div>
 </div>
 <article class="starwars">
@@ -79,32 +88,6 @@
         </div>
     </div>
   </div>
-  <section class="start">
-    <div id="config">
-    <form id="form-starwars">
-      <h2 id="pageTitle">Star wars<br>intro CReator</h2>
-      <button id="videoButton" class="playButton" type="button">download</button>
-      <textarea id="f-intro" rows="2" spellcheck="false" maxlength="300">
-A long time ago, in a galaxy far,
-far away....</textarea><br>
-      <textarea id="f-logo" rows="2" spellcheck="false" maxlength="100">
-Star
-wars</textarea><br>
-      <input id="f-episode" type="text" value="Episode VII" spellcheck="false" maxlength="100"> <br>
-      <input id="f-title" type="text" value="THE FORCE AWAKENS" spellcheck="false" maxlength="100"> <br>
-      <textarea id="f-text" spellcheck="false" maxlength="3000">
-Luke Skywalker has vanished. In his absence, the sinister FIRST ORDER has risen from the ashes of the Empire and will not rest until Skywalker, the last Jedi, has been destroyed.
-With the support of the REPUBLIC, General Leia Organa leads a brave RESISTANCE. She is desperate to find her brother Luke and gain his help in restoring peace and justice to the galaxy.
-Leia has sent her most daring pilot on a secret mission to Jakku, where an old ally has discovered a clue to Luke's whereabouts....
-      </textarea> <br>
-
-      <button id="play" class="playButton" type="submit">
-        Play
-      </button>
-    </form>
-    </div>
-
-  </section>
 
   <div class="animation">
 
@@ -138,36 +121,6 @@ Leia has sent her most daring pilot on a secret mission to Jakku, where an old a
     </div>
   </div>
 </article>
-<div class="socialButtons pageHide">
-    <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="EA3ESE322GAJA">
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-        <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
-    </form>
-
-    <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="AU6WSD3YHLGHY">
-        <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">
-        <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
-    </form>
-
-    <div class="fb-like" data-href="https://www.facebook.com/StarWarsIntroCreator/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-    <div>
-        <a href="https://twitter.com/share" class="twitter-share-button"{count} data-text="Check out this Star Wars Intro Creator!" data-hashtags="StarWars">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    </div>
-    <div>
-        <iframe src="https://ghbtns.com/github-btn.html?user=BrOrlandi&repo=StarWarsIntroCreator&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-    </div>
-</div>
-<div class="newFeatureRight pageHide">
-    New feature: <br>Generate your video at the end.
-</div>
-<div id="footer" class="pageHide">
-    Developed by <a href="https://github.com/BrOrlandi" target="2">Bruno Orlandi</a> and <a href="https://github.com/nihey" target="2">Nihey Takizawa</a> based on <a href="http://timpietrusky.com/star-wars-opening-crawl-from-1977" target="2">Tim Pietrusky</a> work.
-</div>
 <script>
 // logo size calc
 $(window).resize(function() {
@@ -193,31 +146,9 @@ $(document).scroll(function (e) {
     }
 })
 </script>
-<script src="./main.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-71659114-1', 'auto');
-</script>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '966673750071792',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
+<!-- build:js ./main.js -->
+<script src="StarWars.js"></script>
+<script src="main.js"></script>
+<!-- endbuild -->
 </body>
 </html>
