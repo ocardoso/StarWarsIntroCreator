@@ -72,7 +72,7 @@ StarWarsOpening = (function() {
       $("#f-text").val(o.text);
 
       setTimeout(function(){
-          $('body').removeClass('running');
+      //    $('body').removeClass('running');
       },10000);
     }, this));
   }
