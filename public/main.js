@@ -72,6 +72,11 @@ $(function() {
     $('#logosvg',StarWars.animation).css('width',$(window).width()+'px'); // set width of the logo
     $('#logoimg',StarWars.animation).css('width',$(window).width()+'px');
 
+    $("#skip_animation").click(function() {
+        StarWars.reset()
+        $('body').addClass('running-x');
+    });
+
     var logoText = opening.logo ? opening.logo : "star\nwars";
     var aLogo = logoText.split('\n'); // breaks logo text in 2 lines
     var logo1 = aLogo[0];

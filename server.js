@@ -52,12 +52,12 @@ var startServer = function() {
     });
 
     /* --- run SSL server --- */
-    var httpsOptions = {
+    /*var httpsOptions = {
         key: fs.readFileSync(__dirname+'/certs/nonprod.ssl-key.pem'),
         cert: fs.readFileSync(__dirname+'/certs/nonprod.ssl-cert.pem')
-    };
+    };*/
 
-    https.createServer(httpsOptions, app).listen(app.get('sport'), function(){
+    https.createServer({}, app).listen(app.get('sport'), function(){
         console.log("Express server listening on port " + app.get('sport'));
     });
 };

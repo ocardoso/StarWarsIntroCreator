@@ -37,6 +37,14 @@ body {
     margin: 0;
 }
 
+#skip_animation {
+  color: white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index:100;
+}
+
 /* Remove dotted border on Firefox (http://stackoverflow.com/a/199319) */
 button::-moz-focus-inner {
   border: 0;
@@ -135,10 +143,14 @@ button::-moz-focus-inner {
       .tcenter{
         margin: 1.35em 0 -1em 0;
         text-align: center;
+        @media (max-width: 1250px){
+          font-size: 150%;
+        }
       }
     }
   }
 }
+
 
 .verticalWrapper{
     display: flex;
@@ -370,6 +382,16 @@ button::-moz-focus-inner {
   top: 0;
   left: 0;
   background: url('bg-stars.png') repeat;
+  @media (max-width: 1250px){
+    font-size: 350%;
+  }
+}
+
+.running-x {
+  overflow: hidden;
+  .bg{
+    animation: scrolldown;
+  }
 }
 
 .running {
@@ -388,22 +410,13 @@ button::-moz-focus-inner {
   }
 }
 
-.evanStar {
+.grand_finale {
   background: black no-repeat;
-  width: 655px;
+  min-width: 655px;
   height: 663px;
   position: absolute;
   bottom: 1150px;
   left: 100px;
-}
-
-.deathstar {
-  background: black url(deathstar.png) no-repeat;
-  width: 655px;
-  height: 663px;
-  position: absolute;
-  bottom: 1150px;
-  right: 100px;
 }
 
 #logoimg{
