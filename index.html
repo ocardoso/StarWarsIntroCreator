@@ -17,6 +17,8 @@
 
     <link rel="shortcut icon" href="favicon.png">
     <!-- build:css ./styles.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="bb8.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="libs/sweetalert/dist/sweetalert.css">
@@ -31,21 +33,27 @@
     <!-- Add to homescreen -->
     <meta name="mobile-web-app-capable" content="yes">
     <!-- More info: https://developer.chrome.com/multidevice/android/installtohomescreen -->
+
 </head>
 <body>
+<a id="skip_animation"></a>
 <div id="fb-root"></div>
-
 <div class="bg">
-    <div class="evanStar" style="color:white">
-
-        Come. You must. <br>
-        Saturday June 25th, 2:00 - 4:00pm<br>
-        8976 Gainsborough Ave<br>
-        RSVP: rebecca.d.cardoso@gmail.com<br>
-        <br>
-        <img class="evan_invite" src="invite.png">
+    <div class="grand_finale container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                Come. You must. <br>
+                Saturday June 25th, 2:00 - 4:00pm<br>
+                8976 Gainsborough Ave<br>
+                RSVP: orlando.cardoso@gmail.com<br>
+                <br>
+                <img class="evan_invite img-responsive" src="invite2.png">
+            </div>
+            <div class="col-md-6">
+                <img class="deathstar img-responsive" src="deathstar.png">
+            </div>
+        </div>
     </div>
-    <div class="deathstar"></div>
 </div>
 <article class="starwars">
   <audio preload="auto">
@@ -103,9 +111,10 @@
       <div style="width: 100%;">
         <p id="episode" class="tcenter">
         </p>
-        <p  id="title" class="tcenter">
+        <p  id="title" class="tcenter" >
         </p>
-        <div id="text">
+          <br>
+        <div id="text" >
         </div>
       </div>
     </section>
